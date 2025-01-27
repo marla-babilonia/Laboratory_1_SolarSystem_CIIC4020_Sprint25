@@ -28,7 +28,26 @@ public abstract class Planet implements CelestialBody {
      * @throws IllegalArgumentException if the sunPosition is null or invalid.
      */
     public void updatePosition(double[] sunPosition, double sunMass, double timeStep) {
+        
         /*TODO add your solution here*/
+        
+        /*TODO Calculate the distance between the Sun and the Planet*/
+
+        /*TODO Calculate the gravitational force*/
+
+        /*TODO Calculate the acceleration*/
+
+        // Update velocity
+        velocity[0] += ax * timeStep;
+        velocity[1] += ay * timeStep;
+
+        // Update position
+        position[0] += velocity[0] * timeStep;
+        position[1] += velocity[1] * timeStep;
+
+        // Update screen coordinates (for rendering)
+        coordinates[0] = (int) position[0];
+        coordinates[1] = (int) position[1];
     }
 
     /**
